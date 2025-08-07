@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find the Difference Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Find the Differences!</h1>
+  <h2 id="level-display">Level 1</h2>
+
+  <div class="game-info">
+    <div>⏱️ Time Left: <span id="timer">2:00</span></div>
+    <div id="found-box">✅ Found: <span id="found">0</span> / 5</div>
+    <button id="hint-btn">🔍 Hint</button>
+  </div>
+
+  <div class="image-box">
+    <div id="img1-container" class="image-container">
+      <img id="img1" src="level1.png"  alt="Top image"/>
+    </div>
+    <div id="img2-container" class="image-container">
+      <img id="img2" src="level1b.png"  alt="bottom image" />
+    </div>
+  </div>
+
+  <div id="win-screen" class="win-screen" style="display: none;">
+    <div class="win-message">
+      <h2>🎉 Awesome, You Found All Differences!</h2>
+      <button id="next-level-btn">Next Level ➡️</button>
+    </div>
+  </div>
+
+  <div id="lose-screen" class="game-overlay" style="display: none;">
+    <div class="message-box">
+      <h2>😢 Oh no! Time's up!</h2>
+      <button id="play-again-btn">🔁 Try Again</button>
+    </div>
+  </div>
+
+  <audio id="click-sound" src="sounds/click.mp3"></audio>
+  <audio id="win-sound" src="sounds/win.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
